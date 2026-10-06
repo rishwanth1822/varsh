@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sports News</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+/* HEADER */
+
+header{
+    background:#009270;
+    color:white;
+    padding:15px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* LIVE MATCHES */
+
+.live-container{
+    display:flex;
+    overflow-x:auto;
+    padding:15px;
+    gap:15px;
+    background:white;
+}
+
+.match-card{
+    min-width:260px;
+    background:#ffffff;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+.live{
+    color:red;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.team{
+    display:flex;
+    justify-content:space-between;
+    margin:8px 0;
+}
+
+.status{
+    margin-top:10px;
+    color:green;
+    font-weight:bold;
+}
+
+/* MAIN CONTENT */
+
+.container{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.news-section{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.news-card{
+    margin-bottom:20px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:15px;
+}
+
+.news-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.news-card h2{
+    margin-top:10px;
+    color:#009270;
+}
+
+.news-card p{
+    margin-top:10px;
+    line-height:1.6;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.widget{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* IPL TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table th{
+    background:#009270;
+    color:white;
+    padding:10px;
+}
+
+table td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+/* PLAYER STATS */
+
+.player{
+    display:flex;
+    justify-content:space-between;
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🏏 SportsBuzz</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Live Scores</a>
+        <a href="#">IPL</a>
+        <a href="#">Stats</a>
+        <a href="#">News</a>
+    </nav>
+</header>
+
+<!-- LIVE MATCHES -->
+
+<section class="live-container">
+
+    <div class="match-card">
+        <div class="live">🔴 LIVE</div>
+
+        <div class="team">
+            <span>India</span>
+            <span>185/4</span>
+        </div>
+
+        <div class="team">
+            <span>Australia</span>
+            <span>120/3</span>
+        </div>
+
+        <div class="status">
+            India needs 45 runs in 30 balls
+        </div>
+    </div>
+
+    <div class="match-card">
+        <div class="live">🔴 LIVE</div>
+
+        <div class="team">
+            <span>CSK</span>
+            <span>210/5</span>
+        </div>
+
+        <div class="team">
+            <span>MI</span>
+            <span>90/2</span>
+        </div>
+
+        <div class="status">
+            MI need 121 runs
+        </div>
+    </div>
+
+    <div class="match-card">
+        <div class="live">COMPLETED</div>
+
+        <div class="team">
+            <span>RCB</span>
+            <span>176/8</span>
+        </div>
+
+        <div class="team">
+            <span>KKR</span>
+            <span>178/4</span>
+        </div>
+
+        <div class="status">
+            KKR won by 6 wickets
+        </div>
+    </div>
+
+</section>
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="news-section">
+
+        <h1>Latest Sports News</h1>
+
+        <br>
+
+        <div class="news-card">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1200" alt="Cricket">
+
+            <h2>Virat Kohli Smashes Another Century</h2>
+
+            <p>
+                Virat Kohli scored a brilliant century in today's ODI match.
+                Fans across the world praised his outstanding performance.
+            </p>
+        </div>
+
+        <div class="news-card">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200" alt="Sports">
+
+            <h2>IPL 2026 Points Table Updated</h2>
+
+            <p>
+                Chennai Super Kings moved to the top position after defeating Mumbai Indians.
+            </p>
+        </div>
+
+        <div class="news-card">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200" alt="Football">
+
+            <h2>Football World Cup Qualifiers</h2>
+
+            <p>
+                Exciting football matches continue as teams compete for qualification.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="sidebar">
+
+        <!-- IPL TABLE -->
+
+        <div class="widget">
+
+            <h2>IPL Points Table</h2>
+
+            <table>
+                <tr>
+                    <th>Team</th>
+                    <th>Pts</th>
+                </tr>
+
+                <tr>
+                    <td>CSK</td>
+                    <td>16</td>
+                </tr>
+
+                <tr>
+                    <td>MI</td>
+                    <td>14</td>
+                </tr>
+
+                <tr>
+                    <td>RCB</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td>KKR</td>
+                    <td>10</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!-- PLAYER STATS -->
+
+        <div class="widget">
+
+            <h2>Top Player Stats</h2>
+
+            <div class="player">
+                <span>Virat Kohli</span>
+                <span>740 Runs</span>
+            </div>
+
+            <div class="player">
+                <span>Rohit Sharma</span>
+                <span>680 Runs</span>
+            </div>
+
+            <div class="player">
+                <span>Bumrah</span>
+                <span>24 Wickets</span>
+            </div>
+
+            <div class="player">
+                <span>Dhoni</span>
+                <span>510 Runs</span>
+            </div>
+
+        </div>
+
+        <!-- SCORECARD -->
+
+        <div class="widget">
+
+            <h2>Match Scorecard</h2>
+
+            <p><b>India Innings</b></p>
+
+            <br>
+
+            <p>Rohit Sharma - 65(42)</p>
+            <p>Virat Kohli - 88(54)</p>
+            <p>Hardik Pandya - 35(20)</p>
+
+            <br>
+
+            <p><b>Bowling</b></p>
+
+            <p>Starc - 2/34</p>
+            <p>Cummins - 1/40</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SportsBuzz | CricBuzz Style Sports Website
+</footer>
+
+<script>
+
+// AUTO LIVE SCORE UPDATE DEMO
+
+setInterval(() => {
+
+    let random = Math.floor(Math.random() * 6);
+
+    document.querySelector(".match-card .team span:last-child").innerHTML =
+        185 + random + "/4";
+
+}, 3000);
+
+</script>
+
+</body>
+</html>
